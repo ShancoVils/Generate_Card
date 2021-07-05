@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath testcardapp project.wsgi
+web: gunicorn --pythonpath testcard project.wsgi
