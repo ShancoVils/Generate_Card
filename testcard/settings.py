@@ -30,7 +30,7 @@ SECRET_KEY = 'h5g)9h2u7if9rvn!s65*2idskflwwf4aa97z+7kyn52!4dzstk'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['generate-card.herokuapp.com']
+ALLOWED_HOSTS = ['test-card-generate.herokuapp.com']
 
 
 # Application definition
@@ -136,5 +136,5 @@ STATICFILES_DIRS = (
 )
 
 
-ALLOWED_HOSTS = ['generate-card.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['test-card-generate.herokuapp.com', '127.0.0.1']
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
