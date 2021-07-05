@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <script src= "{% static 'script.js'  %}"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    {% if user.is_authenticated %}
+
+        <div class="user-block">
+            <span>{{user.username}}</span>
+            <span><a href="{% url 'logout' %}">Выйти</a></span>
+        </div>
+
+    {% else %}
+
+    <div class="autorize">
+        <form class="form-signup" method="POST" action="autorize" >
+            {% csrf_token %}
+            <label for="username">Логин</label>
+            <input type="text" name="username" class="form-styling"><br>
+            <label for="password">Пароль</label>
+            <input type="password" name="password"  class="form-styling">
+            <input type="submit" value="Вход" >
+        </form>
+    </div>
+
+    {% endif %}
+    <section>
+
+    {% if user.is_authenticated %}
+
+        <div class="add-random-card">
+            <h1>Новые карты</h1>
+            <div class="card-form">
+                <input class="serial" type="text" min="1000" max="9999" maxlength="4" placeholder="серия">
+                <input class="number-card" type="number" placeholder="количество карт">
+                <select class="date-active" name="" id="">
+                    <option>3 года</option>
+                    <option>1 год</option>
+                    <option>6 месяцев</option>
+                    <option>1 месяц</option>
+                </select>
+            <button class="generate-btn" onclick="Generate_Card()">Сгенерировать карты</button>
+            <a class="generate-btn" onclick="Upload_Card()">Загрузить карты</a>
+
+            <form method="POST" action="">
+                <div class="elements">
+                </div>
+            </form>
+        </div>
+    {% else %}
+        <div class="add-random-card">
+            <h1> Для добавления карт необходимо авторизироваться</h1><br>
+            <p>Логин: login</p>
+            <p>Пароль: password</p>
+        </div>
+    {% endif %}
+                        
+
+        
+
+        </div>
+        <div class="search-card">
+            <h1>Список карт</h1>
+
+            {% for Cards in Cards %}
+
+                <div class="cards_info">
+                    <p>Серия: {{Cards.serial}} </p>
+                    <p>Номер: {{Cards.number_card}} </p>
+                    <p>Дата окончаня действия: {{Cards.date_end}} </p>
+                </div>
+
+
+            {% endfor %} 
+
+        </div>
+    </section>
+
+    
+
+
+    
+</body>
+</html>

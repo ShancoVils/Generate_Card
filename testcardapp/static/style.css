@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    background: rgb(145, 184, 196, 0.5);
+    
+}
+
+
+section{
+    display: flex;
+    margin: 0 auto;
+    width: 90%;
+    border: 3px solid rgb(14, 32, 139);
+    border-radius: 25px;
+    margin-top: 10px;
+    height: 80vh;
+    overflow: hidden;
+    
+}
+
+h1{
+    text-align: center;
+    margin-top: 10px;
+    color: rgb(26, 7, 109);
+}
+
+.add-random-card{
+    width: 50%;
+}
+
+.card-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 20px;
+}
+
+
+input,select{
+    text-align: center;
+    outline: none;
+    background: transparent;
+    border: 5px solid rgb(14, 32, 139);
+    border-radius: 20px;
+    width: 40%;
+    margin: 5px;
+    font-size: 25px;
+    margin-left: 30%;
+}
+
+.generate-btn{
+    background: rgb(12, 14, 155, 0.8);
+    margin: 5px;
+    width: 45%;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20pt;
+    margin: 20px 0 0 28%;
+
+}
+
+
+.search-card{
+    overflow: scroll;
+    width: 50%;
+    height: 580px;
+}
+
+
+
+.tamplate-elem{
+    width: 90%;
+    height: 30px;
+    border: 2px solid rgb(14, 32, 139);
+    margin: 2px;
+}
+
+.cards_info{
+    margin-top: 2px;
+    width: 95%;
+    height: 70px;
+    border: 3px solid rgb(14, 32, 139);
+    font-size: 15pt;
+    margin-left: 5px;
+}
+
+.elements{
+    margin-top: 10px;
+    overflow: scroll;
+    border: 1px solid black;
+    height: 200px;
+    width: 100%;
+}
+
+.autorize{
+    margin: 20px 0 0 5%;
+    display: inline-flex;
+    width: 30%;
+    font-size: 15pt; 
+}
+
+.autorize input{
+    width: 50%;
+    font-size: 15px;
+    margin-left: 0;
+
+}
+
+.user-block{
+    margin: 20px 0 0 5%;
+    font-size: 20pt;
+    text-decoration: none;
+}
