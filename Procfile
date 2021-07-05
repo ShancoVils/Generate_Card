@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath artgallery project.wsgi
+web: gunicorn --pythonpath testcardapp project.wsgi
